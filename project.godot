@@ -14,3 +14,7 @@ config/name="Hikaru"
 run/main_scene="uid://12ksbb5kq32m"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[global_group]
+
+trap=""

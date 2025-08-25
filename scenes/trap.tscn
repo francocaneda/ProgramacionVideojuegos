@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://y7ce1i0efk3e"]
+
+[ext_resource type="Script" uid="uid://xtbhblu86v41" path="res://scenes/trap.gd" id="1_npg1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykdm6"]
+size = Vector2(173, 20)
+
+[node name="Trap" type="Node2D"]
+script = ExtResource("1_npg1n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ykdm6")
+debug_color = Color(0.992567, 0, 0.25021, 0.42)

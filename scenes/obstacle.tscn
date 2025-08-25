@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuvnit65xoq6i"]
+
+[ext_resource type="Texture2D" uid="uid://b3wmetkwwwjp3" path="res://assets/sprites/argentina.png" id="1_7ukg5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drdry"]
+size = Vector2(90, 58)
+
+[node name="Obstacle" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+can_sleep = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(1, -15)
+shape = SubResource("RectangleShape2D_drdry")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1, -15)
+scale = Vector2(0.36, 0.36646)
+texture = ExtResource("1_7ukg5")

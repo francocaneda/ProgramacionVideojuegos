@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlxpu3c0dh8hi"]
+
+[ext_resource type="Script" uid="uid://j50ar1vb83qd" path="res://scenes/player.gd" id="1_3vyb7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
+size = Vector2(57, 144)
+
+[sub_resource type="Gradient" id="Gradient_odh3o"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.363636, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.357143, 0.357143, 0.357143, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_g87hm"]
+gradient = SubResource("Gradient_odh3o")
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_3vyb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -14)
+shape = SubResource("RectangleShape2D_3vyb7")
+debug_color = Color(1.92523e-07, 0.612891, 0.618609, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.555328, 0.946355, 0.691742, 1)
+self_modulate = Color(0.498039, 0.545098, 1, 1)
+position = Vector2(-0.999998, -14)
+scale = Vector2(0.222656, 144.312)
+texture = SubResource("GradientTexture1D_g87hm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
